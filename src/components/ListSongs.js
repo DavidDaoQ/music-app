@@ -1,16 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Songs } from "../context";
 
 export default function ListSongs() {
-  const { DataSongs } = useContext(Songs);
+  const { DataSongs, handleSetSong, song } = useContext(Songs);
   const [idSong, setIdSong] = useState(0);
   const handlePlaySong = (idSong) => {
     const song = DataSongs.find((song) => song.id === idSong);
     setIdSong(song);
+    handleSetSong(idSong);
   };
+  useEffect(() => {
+    setIdSong(song.id);
+  }, [song]);
   return (
     <div className="col-span-2 overflow-hidden">
-      <table className="table-auto w-full">
+      <table className="table-auto w-full overflow-y-scroll">
         <thead className="text-white h-12">
           <tr>
             <th className="w-[10%]">#</th>
