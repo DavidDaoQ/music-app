@@ -5,7 +5,13 @@ import "react-h5-audio-player/lib/styles.css";
 export default function Playing() {
   return (
     <div>
-      <AudioPlayer className="player-music" src="" layout="stacked-reverse" />
+      <AudioPlayer
+        className="player-music"
+        src=""
+        layout="stacked-reverse"
+        showSkipControls={true}
+        showJumbControls={false}
+      />
     </div>
   );
 }
