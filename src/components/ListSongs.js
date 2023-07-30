@@ -13,8 +13,8 @@ export default function ListSongs() {
     setIdSong(song.id);
   }, [song]);
   return (
-    <div className="col-span-2 overflow-hidden">
-      <table className="table-auto w-full overflow-y-scroll">
+    <div className="col-span-2 overflow-hidden overflow-y-scroll">
+      <table className="table-auto w-full">
         <thead className="text-white h-12">
           <tr>
             <th className="w-[10%]">#</th>
