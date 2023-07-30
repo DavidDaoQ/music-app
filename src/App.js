@@ -5,6 +5,7 @@ import DetailSong from "./components/DetailSong";
 import ListSongs from "./components/ListSongs";
 import { Songs } from "./context";
 import DataSongs from "./data/songs.json";
+import Playing from "./components/playing";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           {/* span 2 */}
           <ListSongs />
         </div>
+        <Playing />
       </Songs.Provider>
     </div>
   );
